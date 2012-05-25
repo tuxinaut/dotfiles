@@ -44,3 +44,5 @@ alias dpkgpi='dpkg --get-selections | grep -i';
 alias du_copy_dev='cp -rv * /media/test-server/home/httpdocs/http/CEVO_/cccv/dev.formulare-ssl.de';
 alias du_copy_test='cp -rv * /media/test-server/home/httpdocs/http/CEVO_/cccv/DU/';
 alias du_copy_live='cp -rv * /media/live-server/home/httpdocs/http/CEVO_/cccv/DU/';
+
+alias gem_clean='sudo gem install --no-rdoc --no-ri';
