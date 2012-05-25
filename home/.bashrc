@@ -2,10 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-echo "############################################"
-fortune 10% unfug 90% zitate 
-echo "############################################"
-
 #################################################
 # History auf 2000 Befehle erweitern		#
 #################################################
