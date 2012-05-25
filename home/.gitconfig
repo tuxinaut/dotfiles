@@ -1,0 +1,25 @@
+[user]
+	name = Denny Schäfer
+	email = d.schaefer@cevo.de
+[color]
+	ui = auto
+[pack]
+	threads = 0
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	log10 = log -10 --oneline --graph
+	rehead = reset --hard HEAD
+	nfm = merge --no-ff
+	ffm = merge --ff-only
+	tree = log --decorate --pretty=oneline --abbrev-commit --graph
+	fixup = commit --amend -C HEAD
+	ru = remote update --prune
+[difftool]
+	prompt = false
