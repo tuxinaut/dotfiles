@@ -25,3 +25,9 @@ data.location=/home/tuxinaut/.task
 #include /usr/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/share/doc/task/rc/dark-gray-256.theme
 
+# Dates
+dateformat=d.m.Y                              # Preferred input and display date format
+dateformat.holiday=d.m.Y                      # Preferred input date format for holidays
+dateformat.report=d.m.Y                       # Preferred display date format for reports
+dateformat.annotation=d.m.Y                   # Preferred display date format for reports
+weekstart=Monday                              # Sunday or Monday only
