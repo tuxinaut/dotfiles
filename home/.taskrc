@@ -31,3 +31,6 @@ dateformat.holiday=d.m.Y                      # Preferred input date format for 
 dateformat.report=d.m.Y                       # Preferred display date format for reports
 dateformat.annotation=d.m.Y                   # Preferred display date format for reports
 weekstart=Monday                              # Sunday or Monday only
+
+alias.history=history.monthly                 # Prefer monthly over annual history reports
+alias.ghistory=ghistory.monthly               # Prefer monthly graphical over annual history reports
