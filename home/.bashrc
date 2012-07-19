@@ -127,7 +127,7 @@ function ff() {
 }
 
 function BACKUP_PROJECT() {
-	WORK_PATH='/home/zerocool/workspace/'
+	WORK_PATH='/home/tuxinaut/workspace/'
 	FOLDER=""
 	OPTION=$1
 	if [ -n ${OPTION} ]; then
