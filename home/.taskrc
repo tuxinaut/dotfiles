@@ -34,3 +34,9 @@ weekstart=Monday                              # Sunday or Monday only
 
 alias.history=history.monthly                 # Prefer monthly over annual history reports
 alias.ghistory=ghistory.monthly               # Prefer monthly graphical over annual history reports
+
+report.today.columns=id,project,priority,due,description
+report.today.description=Lists today tasks
+report.today.filter=status:pending limit:page due.before:tomorrow due.after:yesterday
+report.today.labels=ID,Project,Pri,Due,Description
+report.today.sort=due+,priority-,project+,description+
