@@ -7,10 +7,6 @@ alias GOTO_WORKSPACE="cd ${WORKSPACE}";
 alias GOTO_DU_GIT="cd ${WORKSPACE}/Du\ Kasse";
 alias GOTO_DU_LIVE="cd /media/live-server/home/httpdocs/http/CEVO_/cccv/DU";
 
-alias GOTO_FPB="cd ${WORKSPACE}/FPB_Onlinerechner";
-alias GOTO_VERMOEGENSSCHADEN_GIT="cd ${WORKSPACE}/Vermoegensschaden/";
-alias GOTO_VERMOEGENSSCHADEN_TESTS="cd ${WORKSPACE}/Vermoegensschaden/tests/";
-
 alias GOTO_ADMIN_GIT="cd ${WORKSPACE}/administration";
 alias GOTO_PYT3UPDATER_GIT="cd ${WORKSPACE}/pyt3updater";
 
