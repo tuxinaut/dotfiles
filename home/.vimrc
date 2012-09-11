@@ -19,3 +19,16 @@ if has("autocmd")
   	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
   	autocmd FileType typoscript setlocal ts=2 sts=2 sw=2 expandtab
 endif
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'vim-scripts/SudoEdit.vim'
+" ...
+
+filetype plugin indent on
