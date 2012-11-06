@@ -40,3 +40,5 @@ report.today.description=Lists today tasks
 report.today.filter=status:pending limit:page due.before:tomorrow due.after:yesterday
 report.today.labels=ID,Project,Pri,Due,Description
 report.today.sort=priority-,due+,project+,description+
+
+report.overdue.sort=due-
