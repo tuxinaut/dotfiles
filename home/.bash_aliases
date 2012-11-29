@@ -10,15 +10,12 @@ alias GOTO_DU_LIVE="cd /media/live-server/home/httpdocs/http/CEVO_/cccv/DU";
 alias GOTO_ADMIN_GIT="cd ${WORKSPACE}/administration";
 alias GOTO_PYT3UPDATER_GIT="cd ${WORKSPACE}/pyt3updater";
 
-alias REDMINE_LOG="ssh cevo_amsterdam tail -F /srv/www/redmine.cevo.de/log/production.log";
-
 ####################################################
 #			System			   #
 ####################################################
 alias ll='ls -l';
 alias hgrep='history | grep -i';
 alias cpr='rsync --progress';
-alias ssh-gitolite='ssh -T';
 
 ####################################################
 #			Apt-get			   #
