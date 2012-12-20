@@ -42,3 +42,5 @@ report.today.labels=ID,Project,Pri,Due,Description
 report.today.sort=priority-,due+,project+,description+
 
 report.overdue.sort=due-
+
+search.case.sensitive=no
