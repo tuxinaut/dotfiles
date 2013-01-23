@@ -4,7 +4,11 @@ set number
 set showmatch
 set incsearch 
 set hlsearch
+
 colorscheme evening
+
+set cursorline
+hi CursorLine ctermbg=Blue ctermfg=White
 
 augroup vimrc
 augroup END
