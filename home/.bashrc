@@ -146,6 +146,10 @@ function BACKUP_PROJECT() {
 	fi
 }
 
+function strToLower () {
+	python -c "print('${1}'.lower())"
+}
+
 function ssh_mount () {
 	sshfs cevo_live-server:/ /media/live-server/;
 	sshfs cevo_test-server:/ /media/test-server/;
