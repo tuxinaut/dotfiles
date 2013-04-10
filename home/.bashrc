@@ -147,7 +147,7 @@ function BACKUP_PROJECT() {
 }
 
 function strToLower () {
-	python -c "print('${1}'.lower())"
+	echo ${1,,}
 }
 
 function ssh_mount () {
