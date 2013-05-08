@@ -168,7 +168,7 @@ LIGHT_GREEN="\[\033[1;32m\]"
  LIGHT_GRAY="\[\033[0;37m\]"
  COLOR_NONE="\[\e[0m\]"
 
-function parse_git_branch {
+function pparse_git_branch {
 	git rev-parse --git-dir &> /dev/null
 	git_status="$(git status 2> /dev/null)"
 	branch_pattern="^# On branch ([^${IFS}]*)"
@@ -209,7 +209,7 @@ function prompt_func() {
 	git rev-parse --git-dir > /dev/null 2>&1
 
 	if [ $? -eq 0 ]; then
-		prompt="${TITLEBAR}${BLUE}[${RED}\W${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE} "
+		prompt="${TITLEBAR}${BLUE}[${RED}\W${GREEN}$(pparse_git_branch)${BLUE}]${COLOR_NONE} "
 		PS1="${prompt}$ "
 	else
 		PS1=$PSAVE
