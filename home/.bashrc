@@ -107,6 +107,8 @@ fi
 #					Meins						#
 #########################################################################################
 
+export EDITOR=vim
+
 # Benachrichtigungen bei langen Prozessen
 if [ -x /usr/bin/notify-send ]; then
   alias alert='notify-send -i gnome-terminal "[$?] $(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/;\s*alert$//'\'')"'
