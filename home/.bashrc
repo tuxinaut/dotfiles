@@ -111,6 +111,7 @@ PROMPT='\[\033[01;32m\]\u\[\033[01;34m\]::\[\033[01;31m\]\h \[\033[00;34m\]{ \[\
 PS1=${PROMPT}
 
 export EDITOR=vim
+HISTTIMEFORMAT="%F %T "
 
 # Benachrichtigungen bei langen Prozessen
 if [ -x /usr/bin/notify-send ]; then
