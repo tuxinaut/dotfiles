@@ -4,11 +4,7 @@ WORKSPACE="~/workspace"
 
 alias GOTO_WORKSPACE="cd ${WORKSPACE}";
 
-alias GOTO_DU_GIT="cd ${WORKSPACE}/Du\ Kasse";
 alias GOTO_DU_LIVE="cd /media/live-server/home/httpdocs/http/CEVO_/cccv/DU";
-
-alias GOTO_ADMIN_GIT="cd ${WORKSPACE}/administration";
-alias GOTO_PYT3UPDATER_GIT="cd ${WORKSPACE}/pyt3updater";
 
 ####################################################
 #			System			   #
