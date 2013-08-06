@@ -4,6 +4,9 @@ WORKSPACE="~/workspace"
 
 alias GOTO_WORKSPACE="cd ${WORKSPACE}";
 
+alias GOTO_DOTFILES="cd ${WORKSPACE}/dotfiles"
+alias GOTO_CHEF_KITCHEN="cd ${WORKSPACE}/chef-kitchen"
+
 alias GOTO_DU_LIVE="cd /media/live-server/home/httpdocs/http/CEVO_/cccv/DU";
 
 ####################################################
