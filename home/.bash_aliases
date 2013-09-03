@@ -8,6 +8,10 @@ alias GOTO_CHEF_KITCHEN="cd ${WORKSPACE}/chef-kitchen"
 
 alias GOTO_DU_LIVE="cd /media/live-server/home/httpdocs/http/CEVO_/cccv/DU";
 
+alias knife_solo="bundle exec knife solo"
+alias knife_databag="knife solo data bag"
+alias berks="bundle exec berks"
+
 ####################################################
 #			System			   #
 ####################################################
