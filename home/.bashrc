@@ -178,7 +178,7 @@ function pparse_git_branch {
 	git rev-parse --git-dir &> /dev/null
 	git_status="$(LANG=en_US git status 2> /dev/null)"
 	branch_pattern="^# On branch ([^${IFS}]*)"
-	detached_branch_pattern="# Not currently on any branch"
+	detached_branch_pattern="^#.*while rebasing branch"
 	remote_pattern="# Your branch is (.*) of"
 	diverge_pattern="# Your branch and (.*) have diverged"
 
