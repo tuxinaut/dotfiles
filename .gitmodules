@@ -1,0 +1,4 @@
+[submodule "home/.bash-git-prompt"]
+	path = home/.bash-git-prompt
+	url = git@github.com:tuxinaut/bash-git-prompt.git
+	branch = own
