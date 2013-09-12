@@ -2,28 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-#################################################
-# History auf 2000 Befehle erweitern            #
-#################################################
-export HISTSIZE=2000
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
-
-# don't put duplicate lines in the history. See bash(1) for more options
-# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
-HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -103,108 +83,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#########################################################################################
-#                                       Meins                                           #
-#########################################################################################
-
-PROMPT="${BGreen}\u${BBlue}::${BRed}\h${Blue}{${BBlue}\w${Blue}${BGreen} ->${Color_Off} "
-PS1=${PROMPT}
-
-export EDITOR=vim
-HISTTIMEFORMAT="%F %T "
-
-# Benachrichtigungen bei langen Prozessen
-if [ -x /usr/bin/notify-send ]; then
-  alias alert='notify-send -i gnome-terminal "[$?] $(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/;\s*alert$//'\'')"'
-fi
-
-# Less Colors for Man Pages
-export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
-export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
-export LESS_TERMCAP_me=$'\E[0m'           # end mode
-export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
-export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
-export LESS_TERMCAP_ue=$'\E[0m'           # end underline
-export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
-
-# Eine Datei finden (Benutzung: ff datei)
-function ff() {
-  find . -type f -iname '*'$*'*' -ls;
-}
-
-function strToLower () {
-  echo ${1,,}
-}
-
-function ssh_mount () {
-  sshfs cevo_live-server:/ /media/live-server/;
-  sshfs cevo_test-server:/ /media/test-server/;
-  echo "#################################"
-  echo "#             Done              #"
-  echo "#################################"
-}
-
-RED="\[\033[0;31m\]"
-YELLOW="\[\033[0;33m\]"
-GREEN="\[\033[0;32m\]"
-BLUE="\[\033[0;34m\]"
-LIGHT_RED="\[\033[1;31m\]"
-LIGHT_GREEN="\[\033[1;32m\]"
-WHITE="\[\033[1;37m\]"
-LIGHT_GRAY="\[\033[0;37m\]"
-COLOR_NONE="\[\e[0m\]"
-
-function pparse_git_branch {
-  git rev-parse --git-dir &> /dev/null
-  git_status="$(LANG=en_US git status 2> /dev/null)"
-  branch_pattern="^# On branch ([^${IFS}]*)"
-  detached_branch_pattern="^#.*while rebasing branch"
-  remote_pattern="# Your branch is (.*) of"
-  diverge_pattern="# Your branch and (.*) have diverged"
-
-  if [[ ${git_status}} =~ "Changed but not updated" ]]; then
-    state="${RED}⚡"
-  fi
-  # add an else if or two here if you want to get more specific
-  if [[ ${git_status} =~ ${remote_pattern} ]]; then
-    if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-      remote="${YELLOW}↑"
-    else
-      remote="${YELLOW}↓"
-    fi
-  fi
-
-  if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-    remote="${YELLOW}↕"
-  fi
-
-  if [[ ${git_status} =~ ${branch_pattern} ]]; then
-    branch=${BASH_REMATCH[1]}
-  elif [[ ${git_status} =~ ${detached_branch_pattern} ]]; then
-    branch="${YELLOW}NO BRANCH"
-  fi
-
-  if [[ ${#state} -gt "0" || ${#remote} -gt "0" ]]; then
-    s=" "
-  fi
-
-  echo " ${branch}${s}${remote}${state}"
-}
-
-function prompt_func() {
-  git rev-parse --git-dir > /dev/null 2>&1
-
-  if [ $? -eq 0 ]; then
-    prompt="${TITLEBAR}${BLUE}[${RED}\W${GREEN}$(pparse_git_branch)${BLUE}]${COLOR_NONE} "
-    PS1="${prompt}$ "
-  else
-    PS1=$PSAVE
-  fi
-}
-
-export PSAVE=$PS1
-
-PROMPT_COMMAND=prompt_func
+########################################################################
+# Own
+########################################################################
 
 NANOBASHCONF="$HOME/.nano-bash/bash.conf"
 if [ -r $NANOBASHCONF ]; then
