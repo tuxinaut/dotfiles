@@ -3,7 +3,7 @@
 # for examples
 
 #################################################
-# History auf 2000 Befehle erweitern		#
+# History auf 2000 Befehle erweitern            #
 #################################################
 export HISTSIZE=2000
 
@@ -45,12 +45,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -104,7 +104,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 #########################################################################################
-#					Meins						#
+#                                       Meins                                           #
 #########################################################################################
 
 PROMPT='\[\033[01;32m\]\u\[\033[01;34m\]::\[\033[01;31m\]\h \[\033[00;34m\]{ \[\033[01;34m\]\w \[\033[00;34m\]}\[\033[01;32m\]-> \[\033[00m\]'
@@ -129,97 +129,97 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # Eine Datei finden (Benutzung: ff datei)
 function ff() {
-	find . -type f -iname '*'$*'*' -ls;
+  find . -type f -iname '*'$*'*' -ls;
 }
 
 function BACKUP_PROJECT() {
-	WORK_PATH='/home/tuxinaut/workspace/'
-	FOLDER=""
-	OPTION=$1
-	if [ -n ${OPTION} ]; then
-		if [ ${OPTION} == "du" ]; then
-			FOLDER="Du Kasse"
-		elif [ ${OPTION} == "ver" ]; then
-			FOLDER="Vermoegensschaden"
-		elif [ ${OPTION} == "one" ]; then
-			FOLDER="FPB_Onlinerechner"
-		else
-			echo "--->Kein Projekt gefunden<---"
-			return 0;
-		fi
+  WORK_PATH='/home/tuxinaut/workspace/'
+  FOLDER=""
+  OPTION=$1
+  if [ -n ${OPTION} ]; then
+    if [ ${OPTION} == "du" ]; then
+      FOLDER="Du Kasse"
+    elif [ ${OPTION} == "ver" ]; then
+      FOLDER="Vermoegensschaden"
+    elif [ ${OPTION} == "one" ]; then
+      FOLDER="FPB_Onlinerechner"
+    else
+      echo "--->Kein Projekt gefunden<---"
+      return 0;
+    fi
 
-		cp -r "${WORK_PATH}${FOLDER}" "${WORK_PATH}${FOLDER}_$(date +%d_%m_%Y-%H_%M)"
-	fi
+    cp -r "${WORK_PATH}${FOLDER}" "${WORK_PATH}${FOLDER}_$(date +%d_%m_%Y-%H_%M)"
+  fi
 }
 
 function strToLower () {
-	echo ${1,,}
+  echo ${1,,}
 }
 
 function ssh_mount () {
-	sshfs cevo_live-server:/ /media/live-server/;
-	sshfs cevo_test-server:/ /media/test-server/;
-	echo "#################################"
-	echo "#             Done              #"
-	echo "#################################"
+  sshfs cevo_live-server:/ /media/live-server/;
+  sshfs cevo_test-server:/ /media/test-server/;
+  echo "#################################"
+  echo "#             Done              #"
+  echo "#################################"
 }
 
-        RED="\[\033[0;31m\]"
-     YELLOW="\[\033[0;33m\]"
-      GREEN="\[\033[0;32m\]"
-       BLUE="\[\033[0;34m\]"
-  LIGHT_RED="\[\033[1;31m\]"
+RED="\[\033[0;31m\]"
+YELLOW="\[\033[0;33m\]"
+GREEN="\[\033[0;32m\]"
+BLUE="\[\033[0;34m\]"
+LIGHT_RED="\[\033[1;31m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
-      WHITE="\[\033[1;37m\]"
- LIGHT_GRAY="\[\033[0;37m\]"
- COLOR_NONE="\[\e[0m\]"
+WHITE="\[\033[1;37m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+COLOR_NONE="\[\e[0m\]"
 
 function pparse_git_branch {
-	git rev-parse --git-dir &> /dev/null
-	git_status="$(LANG=en_US git status 2> /dev/null)"
-	branch_pattern="^# On branch ([^${IFS}]*)"
-	detached_branch_pattern="^#.*while rebasing branch"
-	remote_pattern="# Your branch is (.*) of"
-	diverge_pattern="# Your branch and (.*) have diverged"
+  git rev-parse --git-dir &> /dev/null
+  git_status="$(LANG=en_US git status 2> /dev/null)"
+  branch_pattern="^# On branch ([^${IFS}]*)"
+  detached_branch_pattern="^#.*while rebasing branch"
+  remote_pattern="# Your branch is (.*) of"
+  diverge_pattern="# Your branch and (.*) have diverged"
 
-	if [[ ${git_status}} =~ "Changed but not updated" ]]; then
-		state="${RED}⚡"
-	fi
-	# add an else if or two here if you want to get more specific
-	if [[ ${git_status} =~ ${remote_pattern} ]]; then
-		if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-			remote="${YELLOW}↑"
-		else
-			remote="${YELLOW}↓"
-		fi
-	fi
+  if [[ ${git_status}} =~ "Changed but not updated" ]]; then
+    state="${RED}⚡"
+  fi
+  # add an else if or two here if you want to get more specific
+  if [[ ${git_status} =~ ${remote_pattern} ]]; then
+    if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
+      remote="${YELLOW}↑"
+    else
+      remote="${YELLOW}↓"
+    fi
+  fi
 
-	if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-		remote="${YELLOW}↕"
-	fi
+  if [[ ${git_status} =~ ${diverge_pattern} ]]; then
+    remote="${YELLOW}↕"
+  fi
 
-	if [[ ${git_status} =~ ${branch_pattern} ]]; then
-		branch=${BASH_REMATCH[1]}
-	elif [[ ${git_status} =~ ${detached_branch_pattern} ]]; then
-		branch="${YELLOW}NO BRANCH"
-	fi
+  if [[ ${git_status} =~ ${branch_pattern} ]]; then
+    branch=${BASH_REMATCH[1]}
+  elif [[ ${git_status} =~ ${detached_branch_pattern} ]]; then
+    branch="${YELLOW}NO BRANCH"
+  fi
 
-	if [[ ${#state} -gt "0" || ${#remote} -gt "0" ]]; then
-		s=" "
-	fi
+  if [[ ${#state} -gt "0" || ${#remote} -gt "0" ]]; then
+    s=" "
+  fi
 
-	echo " ${branch}${s}${remote}${state}"
+  echo " ${branch}${s}${remote}${state}"
 }
 
 function prompt_func() {
-	git rev-parse --git-dir > /dev/null 2>&1
+  git rev-parse --git-dir > /dev/null 2>&1
 
-	if [ $? -eq 0 ]; then
-		prompt="${TITLEBAR}${BLUE}[${RED}\W${GREEN}$(pparse_git_branch)${BLUE}]${COLOR_NONE} "
-		PS1="${prompt}$ "
-	else
-		PS1=$PSAVE
-	fi
+  if [ $? -eq 0 ]; then
+    prompt="${TITLEBAR}${BLUE}[${RED}\W${GREEN}$(pparse_git_branch)${BLUE}]${COLOR_NONE} "
+    PS1="${prompt}$ "
+  else
+    PS1=$PSAVE
+  fi
 }
 
 export PSAVE=$PS1
