@@ -206,6 +206,8 @@ export PSAVE=$PS1
 
 PROMPT_COMMAND=prompt_func
 
+[ -s "$HOME/.colors" ] && source "$HOME/.colors"
+
 [ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
