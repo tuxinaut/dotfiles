@@ -94,7 +94,7 @@ else
    echo "WARN: Could not find nano-bash config $NANOBASHCONF"
 fi
 
-[ -s "$HOME/.colors" ] && source "$HOME/.colors"
+[ -s "$HOME/.nano-bash/colors" ] && source "$HOME/.nano-bash/colors"
 
 [ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
 
