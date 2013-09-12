@@ -206,6 +206,13 @@ export PSAVE=$PS1
 
 PROMPT_COMMAND=prompt_func
 
+NANOBASHCONF="$HOME/.nano-bash/bash.conf"
+if [ -r $NANOBASHCONF ]; then
+   source $NANOBASHCONF
+else
+   echo "WARN: Could not find nano-bash config $NANOBASHCONF"
+fi
+
 [ -s "$HOME/.colors" ] && source "$HOME/.colors"
 
 [ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
