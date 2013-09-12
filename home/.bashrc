@@ -132,26 +132,6 @@ function ff() {
   find . -type f -iname '*'$*'*' -ls;
 }
 
-function BACKUP_PROJECT() {
-  WORK_PATH='/home/tuxinaut/workspace/'
-  FOLDER=""
-  OPTION=$1
-  if [ -n ${OPTION} ]; then
-    if [ ${OPTION} == "du" ]; then
-      FOLDER="Du Kasse"
-    elif [ ${OPTION} == "ver" ]; then
-      FOLDER="Vermoegensschaden"
-    elif [ ${OPTION} == "one" ]; then
-      FOLDER="FPB_Onlinerechner"
-    else
-      echo "--->Kein Projekt gefunden<---"
-      return 0;
-    fi
-
-    cp -r "${WORK_PATH}${FOLDER}" "${WORK_PATH}${FOLDER}_$(date +%d_%m_%Y-%H_%M)"
-  fi
-}
-
 function strToLower () {
   echo ${1,,}
 }
