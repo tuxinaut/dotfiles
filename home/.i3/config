@@ -78,16 +78,16 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 workspace "1:Web" output DVI-I-1
 workspace "2:Email" output DVI-I-1
-workspace "3:Terminal" output DVI-I-2
-workspace "4:Terminal-Extern" output DVI-I-1
+workspace "3:Terminal-Extern" output DVI-I-1
+workspace "4:Terminal" output DVI-I-2
 
 bindsym $mod+x move workspace to output right
 
 # switch to workspace
 bindsym $mod+1 workspace 1:Web
 bindsym $mod+2 workspace 2:Email
-bindsym $mod+3 workspace 3:Terminal
-bindsym $mod+4 workspace 4:Terminal-Extern
+bindsym $mod+3 workspace 3:Terminal-Extern
+bindsym $mod+4 workspace 4:Terminal
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -98,8 +98,8 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1:Web
 bindsym $mod+Shift+quotedbl move workspace 2:Email
-bindsym $mod+Shift+section move workspace 3:Terminal
-bindsym $mod+Shift+dollar move workspace 4:Terminal-Extern
+bindsym $mod+Shift+section move workspace 3:Terminal-Extern
+bindsym $mod+Shift+dollar move workspace 4:Terminal
 bindsym $mod+Shift+percent move workspace 5
 bindsym $mod+Shift+ampersand move workspace 6
 bindsym $mod+Shift+slash move workspace 7
@@ -177,8 +177,8 @@ exec xrandr --output DVI-I-1 --mode 1680x1050 && xrandr --output DVI-I-2 --mode 
 exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 1:Web; exec sleep 5 && /usr/bin/keepassx'
 exec --no-startup-id i3-msg 'workspace 2:Email; exec /usr/bin/thunderbird'
-exec --no-startup-id i3-msg 'workspace 3:Terminal; exec /usr/bin/terminator'
-exec --no-startup-id i3-msg 'workspace 4:Terminal-Extern; exec /usr/bin/terminator'
+exec --no-startup-id i3-msg 'workspace 3:Terminal-Extern; exec /usr/bin/terminator'
+exec --no-startup-id i3-msg 'workspace 4:Terminal; exec /usr/bin/terminator'
 exec gtk-redshift
 exec gnome-sound-applet
 exec clipit
