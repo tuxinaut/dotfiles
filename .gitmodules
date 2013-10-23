@@ -2,3 +2,6 @@
 	path = home/.bash-git-prompt
 	url = git@github.com:tuxinaut/bash-git-prompt.git
 	branch = own
+[submodule "home/.scm_breeze"]
+	path = home/.scm_breeze
+	url = https://github.com/ndbroadbent/scm_breeze.git
