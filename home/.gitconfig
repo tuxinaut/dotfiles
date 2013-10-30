@@ -23,3 +23,5 @@
 	ru = remote update --prune
 [difftool]
 	prompt = false
+[push]
+	default = upstream
