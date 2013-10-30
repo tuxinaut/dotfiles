@@ -6,7 +6,7 @@
 [pack]
 	threads = 0
 [merge]
-	tool = vimdiff
+	tool = meld
 [core]
 	editor = vim
 [difftool]
