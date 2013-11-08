@@ -172,6 +172,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5% && killall -SIGUSR1 i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 1 && killall -SIGUSR1 i3status
 
+bindsym Control+$mod+l exec i3lock
+
 exec xrandr --output DVI-I-1 --mode 1680x1050 && xrandr --output DVI-I-2 --mode 1280x1024 --right-of DVI-I-1;
 
 exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
