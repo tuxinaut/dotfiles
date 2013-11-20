@@ -33,6 +33,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'vim-scripts/SudoEdit.vim'
+Bundle 'ervandew/supertab'
 " ...
 
 filetype plugin indent on
