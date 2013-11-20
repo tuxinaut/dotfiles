@@ -158,6 +158,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         id bar-0
+        tray_output DVI-I-1
         position top
         status_command i3status
 }
