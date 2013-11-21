@@ -1,7 +1,13 @@
+[submodule "home/.vim/bundle/vundle"]
+	path = home/.vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+[submodule "home/.scm_breeze"]
+	path = home/.scm_breeze
+	url = https://github.com/ndbroadbent/scm_breeze.git
 [submodule "home/.bash-git-prompt"]
 	path = home/.bash-git-prompt
 	url = git@github.com:tuxinaut/bash-git-prompt.git
 	branch = own
-[submodule "home/.scm_breeze"]
-	path = home/.scm_breeze
-	url = https://github.com/ndbroadbent/scm_breeze.git
+[submodule "home/.fonts/powerline-fonts"]
+	path = home/.fonts/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
