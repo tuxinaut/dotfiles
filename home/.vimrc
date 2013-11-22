@@ -1,11 +1,40 @@
-syntax on
+set nocompatible
+filetype off
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" Other plugins
+Bundle 'bling/vim-airline'
+Bundle 'vim-scripts/SudoEdit.vim'
+Bundle 'ervandew/supertab'
+
+" Turn on filetype plugin and indent loading so that loading the
+" vim-misc stuff below loads the proper files.
+filetype plugin indent on
+
+scriptencoding utf-8
+set encoding=utf-8
+
+"----------------------------------------------------------------------
+"" Basic Options
+"----------------------------------------------------------------------
+
+set cursorline " Highlight the line the cursor is on
+set laststatus=2 " Always show the status bar
 set number
-set showmatch
-set incsearch 
-set hlsearch
+set t_Co=256 " Use 256 colors
+set showmatch " Highlight matching braces
 
-set cursorline
+
+syntax on " Enable filetype detection by syntax
+
+" Search settings
+set hlsearch " Highlight results
+set incsearch " Start showing results as you type
+
 hi CursorLine ctermbg=Blue ctermfg=White
 
 augroup vimrc
@@ -21,23 +50,6 @@ if has("autocmd")
   	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
   	autocmd FileType typoscript setlocal ts=2 sts=2 sw=2 expandtab
 endif
-
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'vim-scripts/SudoEdit.vim'
-Bundle 'ervandew/supertab'
-" ...
-
-filetype plugin indent on
-set encoding=utf-8
-set laststatus=2 " Always show the status bar
-set t_Co=256
 
 "----------------------------------------------------------------------
 " Plugin settings
