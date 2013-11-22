@@ -57,3 +57,9 @@ endif
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "wombat"
+
+"----------------------------------------------------------------------
+" Autocommands
+"----------------------------------------------------------------------
+" Clear whitespace at the end of lines automatically
+autocmd BufWritePre * :%s/\s\+$//e
