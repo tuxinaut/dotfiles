@@ -38,4 +38,9 @@ filetype plugin indent on
 set encoding=utf-8
 set laststatus=2 " Always show the status bar
 set t_Co=256
+
+"----------------------------------------------------------------------
+" Plugin settings
+"----------------------------------------------------------------------
+" Airline
 let g:airline_powerline_fonts = 1
