@@ -190,6 +190,5 @@ exec gnome-sound-applet
 exec clipit
 exec gnome-encfs -m
 exec dropbox start
-exec davmail
 exec nm-applet
 exec tomboy
