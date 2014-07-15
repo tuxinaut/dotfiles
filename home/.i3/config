@@ -208,3 +208,5 @@ exec gnome-encfs -m
 exec dropbox start
 exec nm-applet
 exec tomboy
+
+for_window [class="Hamster"] floating disable
