@@ -193,20 +193,17 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 1 && killall -S
 
 bindsym Control+$mod+l exec i3lock
 
-exec xrandr --output DVI-I-1 --mode 1680x1050 && xrandr --output DVI-I-2 --mode 1280x1024 --right-of DVI-I-1;
-
-exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 1:Web; exec sleep 5 && /usr/bin/keepassx'
-exec --no-startup-id i3-msg 'workspace 2:Email; exec /usr/bin/thunderbird'
+exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox -ProfileManager'
+exec --no-startup-id i3-msg 'workspace 1:Web; exec sleep 5 && /usr/bin/keepass2'
+exec --no-startup-id i3-msg 'workspace 2:Email; exec /usr/bin/thunderbird -ProfileManager'
 exec --no-startup-id i3-msg 'workspace 3:Terminal-Extern; exec /usr/bin/terminator'
 exec --no-startup-id i3-msg 'workspace 4:Terminal; exec /usr/bin/terminator'
 exec --no-startup-id i3-msg 'workspace 5:Chatten; exec /usr/bin/pidgin'
-exec gtk-redshift
-exec gnome-sound-applet
-exec clipit
-exec gnome-encfs -m
-exec dropbox start
-exec nm-applet
-exec tomboy
 
-for_window [class="Hamster"] floating disable
+exec gtk-redshift
+#exec gnome-sound-applet
+exec parcellite
+#exec gnome-encfs -m
+exec dropbox start
+#exec nm-applet
+exec tomboy
