@@ -228,3 +228,7 @@ exec dropbox start
 exec nm-applet
 exec tomboy
 exec rofi -key-run F12 -key-window mod4+Tab
+
+#
+assign [class="^Skype$"] 5:Chatten
+assign [class="^Pidgin$"] 5:Chatten
