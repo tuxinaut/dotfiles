@@ -222,9 +222,8 @@ exec --no-startup-id i3-msg 'workspace 5:Chatten; exec /usr/bin/slack'
 
 
 exec gtk-redshift
-#exec gnome-sound-applet
 exec parcellite
-#exec gnome-encfs -m
+exec gnome-encfs-manager
 exec dropbox start
-#exec nm-applet
+exec nm-applet
 exec tomboy
