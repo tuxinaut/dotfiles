@@ -80,12 +80,12 @@ bindsym $MOD+plus scratchpad show
 
 # focus the child container
 #bindcode $mod+d focus child
-workspace "1:Web" output DVI-I-1
-workspace "2:Email" output DVI-I-1
-workspace "3:Terminal-Extern" output DVI-I-1
-workspace "4:Terminal" output DVI-I-2
-workspace "5:Chatten" output DVI-I-2
-workspace "6:Musik" output DVI-I-2
+workspace "1:Web" output HDMI1
+workspace "2:Email" output HDMI1
+workspace "3:Terminal-Extern" output HDMI1
+workspace "4:Terminal" output DP2
+workspace "5:Chatten" output DP2
+workspace "6:Musik" output DP2
 
 bindsym $mod+x move workspace to output right
 
