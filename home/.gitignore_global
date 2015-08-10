@@ -1,0 +1,18 @@
+# vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# vagrant
+.vagrant/
+
+# meld
+*.orig
+
+*_BACKUP_*
+*_BASE_*
+*_LOCAL_*
+*_REMOTE_*
