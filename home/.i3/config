@@ -217,6 +217,9 @@ exec --no-startup-id i3-msg 'workspace 2:Email; exec /usr/bin/thunderbird -Profi
 exec --no-startup-id i3-msg 'workspace 3:Terminal-Extern; exec /usr/bin/terminator'
 exec --no-startup-id i3-msg 'workspace 4:Terminal; exec /usr/bin/terminator'
 exec --no-startup-id i3-msg 'workspace 5:Chatten; exec /usr/bin/pidgin'
+exec --no-startup-id i3-msg 'workspace 5:Chatten; exec /usr/bin/skype'
+exec --no-startup-id i3-msg 'workspace 5:Chatten; exec /usr/bin/slack'
+
 
 exec gtk-redshift
 #exec gnome-sound-applet
