@@ -212,7 +212,7 @@ exec --no-startup-id feh --bg-scale '/home/tuxinaut/Pictures/31c3-background-vis
 exec_always ~/.i3/i3-init
 
 exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox -ProfileManager'
-exec --no-startup-id i3-msg 'workspace 1:Web; exec sleep 5 && /usr/bin/keepass2'
+exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/keepass2'
 exec --no-startup-id i3-msg 'workspace 2:Email; exec /usr/bin/thunderbird -ProfileManager'
 exec --no-startup-id i3-msg 'workspace 3:Terminal-Extern; exec /usr/bin/terminator'
 exec --no-startup-id i3-msg 'workspace 4:Terminal; exec /usr/bin/terminator'
