@@ -7,3 +7,6 @@
 [submodule "home/.fonts/powerline-fonts"]
 	path = home/.fonts/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "home/.bash-git-prompt"]
+	path = home/.bash-git-prompt
+	url = https://github.com/magicmonty/bash-git-prompt.git
