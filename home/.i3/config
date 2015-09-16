@@ -198,8 +198,8 @@ bindsym XF86AudioLowerVolume exec amixer -q -c 1 -D pulse set Master 5%- unmute 
 bindsym XF86AudioMute exec amixer -q -c 1 -D pulse set Master 1+ toggle && killall -SIGUSR1 i3status
 
 # Hintergrund Helligkeit
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 
 bindsym Control+$mod+l exec i3lock
