@@ -129,3 +129,5 @@ if [ -r $NANOBASHCONF ]; then
 else
    echo "WARN: Could not find nano-bash config $NANOBASHCONF"
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
