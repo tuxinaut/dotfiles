@@ -117,8 +117,6 @@ fi
 # Own
 ########################################################################
 
-[ -s "$HOME/.bash-git-prompt/gitprompt.sh" ] && source "$HOME/.bash-git-prompt/gitprompt.sh"
-
 [ -s "$HOME/.nano-bash/colors" ] && source "$HOME/.nano-bash/colors"
 
 [ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
