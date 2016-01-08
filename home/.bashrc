@@ -119,9 +119,9 @@ fi
 
 [ -s "$HOME/.nano-bash/colors" ] && source "$HOME/.nano-bash/colors"
 
-[ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+[ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
 
 NANOBASHCONF="$HOME/.nano-bash/bash.conf"
 if [ -r $NANOBASHCONF ]; then
