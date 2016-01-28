@@ -228,6 +228,11 @@ exec nm-applet
 exec tomboy
 exec rofi -key-run F12 -key-window mod4+Tab
 
-#
+# Place applications on the right workspace
 assign [class="^Skype$"] 5:Chatten
 assign [class="^Pidgin$"] 5:Chatten
+assign [class=".*Slack$"] 5:Chatten
+
+# Place windows on the right workspace
+for_window [title=".*YouTube.*"] move to workspace "6:Musik"
+for_window [title=".*Hangouts.*"] move to workspace "5:Chatten"
