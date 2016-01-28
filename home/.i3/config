@@ -201,7 +201,6 @@ bindsym XF86AudioMute exec amixer -q -c 1 -D pulse set Master 1+ toggle && killa
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-
 bindsym Control+$mod+l exec i3lock
 
 # Autolock und Hintergrundbild
