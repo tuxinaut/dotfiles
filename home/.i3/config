@@ -83,9 +83,9 @@ bindsym $MOD+plus scratchpad show
 workspace "1:Web" output HDMI1
 workspace "2:Email" output HDMI1
 workspace "3:Terminal-Extern" output HDMI1
-workspace "4:Terminal" output DP2
-workspace "5:Chatten" output DP2
-workspace "6:Musik" output DP2
+workspace "4:Terminal" output DP2-1
+workspace "5:Chatten" output DP2-1
+workspace "6:Musik" output DP2-1
 
 bindsym $mod+x move workspace to output right
 
