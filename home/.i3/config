@@ -237,3 +237,5 @@ assign [class=".*Slack$"] 5:Chatten
 # Place windows on the right workspace
 for_window [title=".*YouTube.*"] move to workspace "6:Musik"
 for_window [title=".*Hangouts.*"] move to workspace "5:Chatten"
+for_window [title=".*Thunderbird.*"] move to workspace "2:EMail"
+for_window [title=".*Open Database.*"] move to workspace "1:Web"
