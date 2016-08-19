@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-tabbed=( 1:Web )
+tabbed="1:Web 5:Chatten 6:Musik 4:Terminal"
 
 for w in $tabbed; do
-	i3-msg "workspace $w; layout stacked"
+  i3-msg "workspace $w; layout stacked"
 done
 
-i3-msg 'workspace 5:Chatten; append_layout /home/tuxinaut/.i3/workspace_chatten.json'
-i3-msg "workspace 1:Web"
+i3-msg "workspace 2:Email; layout tabbed"
