@@ -123,9 +123,10 @@ fi
 
 [ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
 
-NANOBASHCONF="$HOME/.nano-bash/bash.conf"
-if [ -r $NANOBASHCONF ]; then
-   source $NANOBASHCONF
+NANOBASH_HOME="${HOME}/.nano-bash"
+NANOBASH_CONF="${NANOBASH_HOME}/bash.conf"
+if [ -r $NANOBASH_CONF ]; then
+   source $NANOBASH_CONF
 else
    echo "WARN: Could not find nano-bash config $NANOBASHCONF"
 fi
