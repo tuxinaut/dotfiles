@@ -1,0 +1,49 @@
+#!/bin/sh
+
+lock() {
+    i3lock -i /home/tuxinaut/Pictures/31c3-background-visual.png
+}
+
+kill_xautolock() {
+  echo ""
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        kill $(pgrep xautolock) && xset +dpms && lock && dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+        ;;
+    hibernate)
+        lock && dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate
+        ;;
+    reboot)
+        dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
+        ;;
+    present)
+        PID=$(pgrep xautolock)
+
+        # Make display black or not
+        if [ -z $PID ]; then
+          /usr/local/bin/my_xautolock
+          xset dpms 600
+        else
+          kill $PID
+          xset -dpms
+        fi
+
+        ;;
+    shutdown)
+        dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|present|shutdown}"
+        exit 2
+        ;;
+esac
+
+exit 0
