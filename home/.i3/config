@@ -219,6 +219,9 @@ exec nm-applet
 exec tomboy
 exec rofi -key-run F12 -key-window SuperL+Tab -threads 0
 
+###############################################################################
+# xprop is your friend to pick the right values
+
 # Place applications on the right workspace
 assign [class="^Skype$"] 5:Chatten
 assign [class="^Pidgin$"] 5:Chatten
