@@ -1,0 +1,6 @@
+#!/bin/bash
+
+xautolock -time 3 -locker '/usr/bin/i3lock -i /home/tuxinaut/Pictures/31c3-background-visual.png' -corners +-00 -cornerdelay 4 -cornerredelay 4 & > /dev/null;
+echo $! > ~/xautounlock.pid
+
+exit 0
