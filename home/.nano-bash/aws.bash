@@ -1,3 +1,7 @@
+#######################################
+# EMR
+#######################################
+
 # Find AWS instances by Tag
 # 1 tag e.g Type
 # 2 Value e.g bt-core-node
