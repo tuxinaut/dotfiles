@@ -74,6 +74,11 @@ aws_emr_last_steps() {
   aws emr list-steps --cluster-id $1 --max $max --query "Steps[*].[Id, Status.State, Status.Timeline.CreationDateTime, Status.Timeline.StartDateTime, Status.Timeline.EndDateTime]"
 }
 
+aws_emr_step_runtime() {
+  START="$(date -u "+%s" -d @"$(aws emr list-steps --step-states=RUNNING --cluster-id $1 --query "Steps[*].[Status.Timeline.StartDateTime]" --output text)")"
+  END="$(date -u "+%s")"
+  echo $((END-START)) | awk '{print "Current Step runtime: "int($1/60)" minutes"}'
+}
 
 aws_get_export() {
   if [ -z $1 ]; then
