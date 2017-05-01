@@ -78,6 +78,7 @@ workspace "5:Chatten" output DP2-1
 workspace "6:Musik" output DP2-1
 
 bindsym $mod+x move workspace to output right
+bindsym $mod+y move workspace to output up
 
 # switch to workspace
 bindsym $mod+1 workspace 1:Web
