@@ -16,7 +16,7 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        kill $(pgrep xautolock) && xset +dpms && lock && dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+        kill $(pgrep xautolock); xset dpms 600 && lock && dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend
         ;;
     hibernate)
         lock && dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate
