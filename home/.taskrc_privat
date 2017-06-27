@@ -28,3 +28,10 @@ verbose=blank,footnote,label,new-id,affected,edit,special,project
 #include /usr/share/task/dark-gray-256.theme
 
 search.case.sensitive=no
+
+dateformat=Y/m/d
+dateformat.annotation=Y/m/d
+dateformat.edit=Y/m/d H:N:S
+dateformat.holiday=YMD
+dateformat.info=Y/m/d H:N:S
+dateformat.report=Y/m/d
