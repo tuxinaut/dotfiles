@@ -1,4 +1,5 @@
-
+# 2. Using i3
+# Set default mod key to Windoof key
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
