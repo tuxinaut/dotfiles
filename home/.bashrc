@@ -121,3 +121,10 @@ else
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
