@@ -110,7 +110,7 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-[ -s "/home/tuxinaut/.scm_breeze/scm_breeze.sh" ] && source "/home/tuxinaut/.scm_breeze/scm_breeze.sh"
+[ -s "/home/denny-schaefer/.scm_breeze/scm_breeze.sh" ] && source "/home/denny-schaefer/.scm_breeze/scm_breeze.sh"
 
 NANOBASH_HOME="${HOME}/.nano-bash"
 NANOBASH_CONF="${NANOBASH_HOME}/bash.conf"
@@ -124,7 +124,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+[ -f /home/denny-schaefer/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/denny-schaefer/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/tuxinaut/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+[ -f /home/denny-schaefer/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/denny-schaefer/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
