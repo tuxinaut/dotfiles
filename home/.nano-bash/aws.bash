@@ -7,6 +7,8 @@
 # 2 Value e.g bt-core-node
 aws_ec2_find_instance_by_tag() {
   aws ec2 describe-instances --filters "Name=tag:$1,Values=$2" --query "sort_by(Reservations[].Instances[].{LaunchTime: LaunchTime, InstanceType: InstanceType, State:State.Name, InstanceId:InstanceId, PRIVAT_IP:to_string(NetworkInterfaces[].PrivateIpAddresses[].PrivateIpAddress), PublicDnsName:PublicDnsName, TAGS:join(' ', sort(Tags[].Value))}, &TAGS)"
+
+  export EC2_ID=$(aws ec2 describe-instances --filters "Name=tag:$1,Values=$2" --query "Reservations[].Instances[].[InstanceId]" --output text)
 }
 
 aws_ec2_find_instance_by_private_ip() {
