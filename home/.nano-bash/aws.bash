@@ -40,6 +40,20 @@ aws_ec2_terminate_instance() {
 }
 
 #######################################
+# AMI
+#######################################
+aws_ami_remove() {
+  if [[ $1 = $'ami'* ]]; then
+    AMI_ID="$1"
+    ID=$( aws sts get-caller-identity  --query 'Account' --output text)
+    SNAPSHOT_ID=$(aws ec2 describe-images --filters  "Name=image-id,Values=$AMI_ID" --owners $ID --query "reverse(sort_by(Images, &CreationDate)[].[BlockDeviceMappings[].Ebs.SnapshotId])[0]" --output text)
+    aws ec2 deregister-image --image-id $AMI_ID
+    aws ec2 delete-snapshot --snapshot-id $SNAPSHOT_ID
+  else
+    echo "AMI format isn't valide"
+  fi
+}
+#######################################
 # Security groups
 #######################################
 
