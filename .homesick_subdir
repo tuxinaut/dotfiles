@@ -2,3 +2,4 @@
 .config/gtk-3.0
 .fonts/truetype
 .fonts/powerline-fonts
+.config/rofi

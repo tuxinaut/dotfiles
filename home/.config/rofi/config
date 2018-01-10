@@ -1,0 +1,45 @@
+rofi.background: #073642
+rofi.foreground: #eee8d5
+rofi.highlightbg: #b58900
+rofi.highlightfg: #ffffff
+rofi.bordercolor: #678698
+rofi.padding: 1
+rofi.lines: 10
+rofi.borderwidth: 1
+rofi.opacity: 100
+rofi.font: Inconsolata 16
+rofi.location: 7
+rofi.yoffset: 0
+rofi.xoffset: 0
+rofi.width: 100
+rofi.fixed_num_lines: 1
+rofi.hmode: false
+rofi.terminal: st
+rofi.ssh-set-title: false
+
+!rofi.location: 0
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+!rofi.color-enabled: true
+!rofi.color-window: #002b37, #002b37, #003642
+!rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
+!rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+!rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   argb:a02f1e2e, #b4b4b4, argb:a02f1e2e, argb:54815ba4, #ffffff
+! Color scheme for urgent row
+rofi.color-urgent:                   argb:272f1e2e, #ef6155, argb:2f2f1e2e, argb:54815ba4, #ef6155
+! Color scheme for active row
+rofi.color-active:                   argb:272f1e2e, #815ba4, argb:2f2f1e2e, argb:54815ba4, #815ba4
+! Color scheme window
+rofi.color-window:                   #2f1e2e, argb:36ef6155, argb:2fef6155
+! Separator style (none, dash, solid)
+rofi.separator-style:                dash
