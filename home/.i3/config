@@ -213,13 +213,16 @@ exec --no-startup-id i3-msg 'workspace 3:Terminal-Extern; exec /usr/bin/terminat
 exec --no-startup-id i3-msg 'workspace 4:Terminal; exec /usr/bin/terminator -T "The Terminal"'
 exec --no-startup-id i3-msg 'workspace 5:Chatten; exec /usr/bin/slack'
 
+bindsym $mod+Tab exec rofi -show combi run -threads 0
+
 exec gtk-redshift
 exec parcellite
 exec gnome-encfs-manager
 exec dropbox start
 exec nm-applet
 exec tomboy
-exec rofi -key-run F12 -key-window SuperL+Tab -threads 0
+
+
 
 ###############################################################################
 # xprop is your friend to pick the right values
