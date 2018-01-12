@@ -4,9 +4,6 @@ lock() {
     i3lock -i /home/denny-schaefer/Pictures/31c3-background-visual.png
 }
 
-kill_xautolock() {
-  echo ""
-}
 
 case "$1" in
     lock)
