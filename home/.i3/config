@@ -227,7 +227,6 @@ exec nm-applet
 
 # Place applications on the right workspace
 assign [class="^Skype$"] 5:Chatten
-assign [class="^Pidgin$"] 5:Chatten
 assign [class=".*Slack$"] 5:Chatten
 
 # Place windows on the right workspace
