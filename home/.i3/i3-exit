@@ -13,13 +13,13 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        kill $(pgrep xautolock); xset dpms 600 && lock && dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+        kill $(pgrep xautolock); xset dpms 600 && lock && systemctl suspend
         ;;
     hibernate)
-        lock && dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate
+        lock && systemctl hibernate
         ;;
     reboot)
-        dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
+        systemctl reboot
         ;;
     present)
         PID=$(pgrep xautolock)
@@ -35,7 +35,7 @@ case "$1" in
 
         ;;
     shutdown)
-        dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+        systemctl shutdown
         ;;
     *)
         echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|present|shutdown}"
