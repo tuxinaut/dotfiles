@@ -189,9 +189,9 @@ bindsym Control+$mod+s workspace next
 bindsym Control+$mod+q workspace back_and_forth
 
 # Sound Management
-bindsym XF86AudioRaiseVolume exec amixer -q -c 1 -D pulse set Master 5%+ unmute && killall -SIGUSR1 i3status
-bindsym XF86AudioLowerVolume exec amixer -q -c 1 -D pulse set Master 5%- unmute && killall -SIGUSR1 i3status
-bindsym XF86AudioMute exec amixer -q -c 1 -D pulse set Master 1+ toggle && killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ unmute && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- unmute && killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec amixer -D pulse sset Master 1+ toggle && killall -SIGUSR1 i3status
 
 # Hintergrund Helligkeit
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
