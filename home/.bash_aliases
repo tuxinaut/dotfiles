@@ -21,4 +21,4 @@ alias addr='sudo add-apt-repository';
 # dpkg
 alias dpkgpi='dpkg --get-selections | grep -i';
 
-alias gem_clean='sudo gem install --no-rdoc --no-ri';
+alias gem_clean='gem install --no-rdoc --no-ri';
