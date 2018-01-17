@@ -5,16 +5,16 @@ alias ll='ls -l';
 alias hgrep='history | grep -i';
 alias cpr='rsync --progress';
 
-# Apt-get
-alias ags='apt-cache search';
-alias agpi='apt-cache show';
-alias agi='sudo apt-get install';
-alias agr='sudo apt-get remove';
-alias agu='sudo apt-get update';
-alias agg='sudo apt-get upgrade';
-alias agd="apt-cache depends"
-alias agr="sudo apt-get remove"
-alias agrp="sudo apt-get purge"
+# Apt
+alias ags='apt search';
+alias agpi='apt show';
+alias agi='sudo apt install';
+alias agr='sudo apt remove';
+alias agu='sudo apt update';
+alias agg='sudo apt upgrade';
+alias agd="apt depends"
+alias agr="sudo apt remove"
+alias agrp="sudo apt purge"
 
 alias addr='sudo add-apt-repository';
 
