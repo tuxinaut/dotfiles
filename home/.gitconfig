@@ -9,7 +9,7 @@
 	tool = meld
 [core]
 	editor = vim
-	excludesfile = /home/tuxinaut/.gitignore_global
+	excludesfile = /home/denny-schaefer/.gitignore_global
 [difftool]
 	prompt = false
 [push]
