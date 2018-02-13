@@ -35,7 +35,7 @@ case "$1" in
 
         ;;
     shutdown)
-        systemctl halt
+        systemctl poweroff
         ;;
     *)
         echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|present|shutdown}"
