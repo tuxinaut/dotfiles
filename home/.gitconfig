@@ -16,3 +16,9 @@
 	default = upstream
 [diff]
 	compactionHeuristic = true
+[user]
+	signingkey = E3AAC87E8644949D
+[commit]
+	gpgSign = true
+[gpg]
+	program = gpg2
