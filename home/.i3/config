@@ -226,6 +226,8 @@ exec nm-applet
 ###############################################################################
 # xprop is your friend to pick the right values
 
+for_window [window_role="GtkFileChooserDialog"] floating disable
+
 # Place applications on the right workspace
 assign [class="^Skype$"] 5:Chatten
 assign [class=".*Slack$"] 5:Chatten
