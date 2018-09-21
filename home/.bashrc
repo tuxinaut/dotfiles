@@ -130,3 +130,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [ -f /home/denny-schaefer/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/denny-schaefer/workspace/smaato/serverless/env/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
 
 [ -f /home/denny-schaefer/.nix-profile/etc/profile.d/nix.sh ] && . /home/denny-schaefer/.nix-profile/etc/profile.d/nix.sh
+
+ponysay "New terminal new code"
