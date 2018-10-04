@@ -34,10 +34,10 @@ git_alias="g"
 # 1. 'SCM Breeze' functions
 git_status_shortcuts_alias="gs"
 git_add_shortcuts_alias="ga"
-git_add_patch_alias="gap"
-git_add_updated_alias="gau"
-git_show_files_alias="gsf"
 exec_scmb_expand_args_alias="ge"
+git_show_files_alias="gsf"
+git_commit_all_alias="gca"
+git_grep_shortcuts_alias="gtrep"
 # 2. Commands that handle paths (with shortcut args expanded)
 git_checkout_alias="gco"
 git_checkout_branch_alias="gcb"
@@ -53,6 +53,7 @@ git_diff_file_alias="gdf"
 git_diff_word_alias="gdw"
 git_diff_cached_alias="gdc"
 git_difftool_alias="gdt"
+git_mergetool_alias="gmt"
 # 3. Standard commands
 git_clone_alias="gcl"
 git_fetch_alias="gf"
@@ -68,7 +69,8 @@ git_status_short_alias="gss"
 git_clean_alias="gce"
 git_clean_force_alias="gcef"
 git_add_all_alias="gaa"
-git_commit_all_alias="gca"
+git_add_patch_alias="gap"
+git_add_updated_alias="gau"
 git_commit_amend_alias="gcm"
 git_commit_amend_no_msg_alias="gcmh"
 git_commit_no_msg_alias="gch"
@@ -89,7 +91,7 @@ git_merge_only_fast_forward_alias="gmff"
 git_cherry_pick_alias="gcp"
 git_log_alias="gl"
 git_log_all_alias="gla"
-git_log_stat_alias="gls"
+git_log_stat_alias="glst"
 git_log_graph_alias="glg"
 git_show_alias="gsh"
 git_show_summary="gsm"  # (gss taken by git status short)
@@ -111,9 +113,10 @@ git_pull_request_alias="gpr"
 # ----------------------------------------------
 # Keyboard shortcuts are on by default. Set this to 'false' to disable them.
 git_keyboard_shortcuts_enabled="true"
-git_commit_all_keys="\C-x "        		  # CTRL+x, SPACE
-git_add_and_commit_keys="\C-xc"    		  # CTRL+x, c
-git_commit_all_with_ci_skip_keys="\C-xv"  # CTRL+x, v    (Appends [ci skip] to commit message)
+git_commit_all_keys="\C-x "               # CTRL+x, SPACE
+git_add_and_commit_keys="\C-xc"           # CTRL+x, c
+git_commit_all_with_ci_skip_keys="\C-xv"  # CTRL+x, v    (Appends [ci skip] to message)
+git_add_and_amend_commit_keys="\C-xz"     # CTRL+x, z
 
 
 # Shell Command Wrapping
