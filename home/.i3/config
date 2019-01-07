@@ -225,7 +225,7 @@ bindsym Control+$mod+l exec i3lock
 
 # Autolock und Hintergrundbild
 exec --no-startup-id xset dpms 600
-exec --no-startup-id /usr/local/bin/my_xautolock
+exec --no-startup-id /home/denny-schaefer/bin/my_xautolock
 exec --no-startup-id /usr/bin/xss-lock -- /home/denny-schaefer/.i3/i3-exit lock
 exec --no-startup-id blueman-applet
 exec --no-startup-id feh --bg-scale '/home/denny-schaefer/Pictures/31c3-background-visual.png'
