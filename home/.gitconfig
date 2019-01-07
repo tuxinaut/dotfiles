@@ -22,3 +22,6 @@
 	gpgSign = true
 [gpg]
 	program = gpg2
+[credential]
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
