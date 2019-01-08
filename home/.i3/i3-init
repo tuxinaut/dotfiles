@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-tabbed="1:Web 5:Chatten 6:Musik 4:Terminal"
+tabbed="1: 5: 6: 4: "
 
 for w in $tabbed; do
   i3-msg "workspace $w; layout stacked"
 done
 
-i3-msg "workspace 2:Email; layout tabbed"
+i3-msg "workspace 2:; layout tabbed"
