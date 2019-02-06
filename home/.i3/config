@@ -212,6 +212,9 @@ bindsym Control+$mod+a workspace prev
 bindsym Control+$mod+s workspace next
 bindsym Control+$mod+q workspace back_and_forth
 
+# Keyboard Management
+bindsym XF86Sleep exec ~/.i3/i3-exit suspend
+
 # Sound Management
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ unmute && killall -SIGUSR1 i3status
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- unmute && killall -SIGUSR1 i3status
