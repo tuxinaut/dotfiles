@@ -22,3 +22,6 @@ alias addr='sudo add-apt-repository';
 alias dpkgpi='dpkg --get-selections | grep -i';
 
 alias gem_clean='gem install --no-rdoc --no-ri';
+
+# Nix
+alias update_home='nix-channel --update && home-manager -f ~/.config/nixpkgs/work.nix switch'
