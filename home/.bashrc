@@ -106,6 +106,11 @@ fi
 # Own
 ########################################################################
 
+# Properly fixes
+# /nix/store/x0mlaj4z4ciycaycfwc36l1932mwywfj-bash-4.4-p23/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+glibcLocales=$(nix-build --no-out-link "<nixpkgs>" -A glibcLocales)
+export LOCALE_ARCHIVE_2_27="${glibcLocales}/lib/locale/locale-archive"
+
 [ -s "$HOME/.nano-bash/colors" ] && source "$HOME/.nano-bash/colors"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
