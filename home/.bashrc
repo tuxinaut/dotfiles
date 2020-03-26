@@ -115,7 +115,6 @@ export LOCALE_ARCHIVE_2_27="${glibcLocales}/lib/locale/locale-archive"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-[ -s "/home/denny-schaefer/.scm_breeze/scm_breeze.sh" ] && source "/home/denny-schaefer/.scm_breeze/scm_breeze.sh"
 
 NANOBASH_HOME="${HOME}/.nano-bash"
 NANOBASH_CONF="${NANOBASH_HOME}/bash.conf"
@@ -124,6 +123,8 @@ if [ -r $NANOBASH_CONF ]; then
 else
    echo "WARN: Could not find nano-bash config $NANOBASHCONF"
 fi
+
+[ -s "/home/denny-schaefer/.scm_breeze/scm_breeze.sh" ] && source "/home/denny-schaefer/.scm_breeze/scm_breeze.sh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
