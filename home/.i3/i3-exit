@@ -13,7 +13,12 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        kill $(pgrep xautolock); xset dpms 600 && lock && systemctl suspend
+        PID=$(pgrep xss)
+
+        if [ $PID ]; then
+          kill $PID
+        fi
+        xset dpms 600 && lock && systemctl suspend
         ;;
     hibernate)
         lock && systemctl hibernate
@@ -22,7 +27,7 @@ case "$1" in
         systemctl reboot
         ;;
     present)
-        PID=$(pgrep xautolock)
+        PID=$(pgrep xss)
 
         # Make display black or not
         if [ -z $PID ]; then
