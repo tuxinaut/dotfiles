@@ -25,3 +25,5 @@ alias gem_clean='gem install --no-rdoc --no-ri';
 
 # Nix
 alias update_home='nix-channel --update && home-manager switch'
+
+alias onelogin-aws-login='source ~/workspace/virtualenvs/aws_cli/bin/activate && onelogin-aws-login'
