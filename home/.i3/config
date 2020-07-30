@@ -246,7 +246,6 @@ bindsym $mod+Tab exec rofi -show combi run -threads 0
 
 exec gtk-redshift
 exec parcellite
-exec dropbox start
 exec nm-applet
 
 
