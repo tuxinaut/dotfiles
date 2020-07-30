@@ -248,8 +248,8 @@ exec gtk-redshift
 exec parcellite
 exec nm-applet
 
-
-
+bindsym Control+$mod+R exec /usr/bin/autorandr dell_rotate_left
+bindsym Control+$mod+N exec /usr/bin/autorandr dell_rotate_normal
 ###############################################################################
 # xprop is your friend to pick the right values
 
